@@ -67,7 +67,7 @@ nav.contact {
   }
   nav.contact a:hover{
       font-weight: bold;
-      font-size: 35px;
+      font-size: 30px;
       background-color: var(--main-color);
       color: var(--sub-color);
   }
@@ -274,11 +274,17 @@ header nav > ul > li:last-child{
     margin-left: 3%;
 }
   #s2 {
-    background: #3498db;
+    background-image: url(/images/sub\ bk.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
   
   #s3 {
-    background: #9b59b6;
+    background-image: url(/images/sub\ bk.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
   
   .fullpage {
