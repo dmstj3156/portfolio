@@ -51,10 +51,11 @@ nav.contact {
     top: 0px;
     width: 18%;
     height: 100vh;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,1);
     text-align: center;
     padding-top: 180px;
     display: none;
+    box-shadow: 1px 1px 2px var(--main-color);
   }
   nav.contact a{
     text-decoration: none;
@@ -70,6 +71,14 @@ nav.contact {
       font-size: 30px;
       background-color: var(--main-color);
       color: var(--sub-color);
+  }
+  nav.contact > .click{
+    font-size: 50px;
+    padding-top: 320px;
+    color: var(--main-color);
+  }
+  nav.contact > .click > i{
+      padding-bottom: 20px;
   }
   nav.show{
     display: block;
@@ -120,7 +129,17 @@ header nav.gnb >  ul.depth1 > li{
     padding-bottom: 10px;
 }
 header nav.gnb >  ul.depth1 > li a{
-    color: var(--main-color);
+  color: var(--main-color) ;
+  
+  font-weight: bold;
+}
+header nav.gnb >  ul.depth1 >li > a.bold{
+  -webkit-text-stroke: 1px var(--main-color);
+}
+header nav.gnb >  ul.depth1 > li a.stroke{
+    color: var(--sub-color) ;
+    -webkit-text-stroke: 1px var(--main-color);
+    font-weight: bold;
 }
 header nav.gnb >  ul.depth1 > li:hover{
     text-decoration: none;
@@ -142,7 +161,7 @@ header nav > ul > li:last-child{
  header nav .depth2 > li{
      width: 120px;
      /*background-color: cadetblue;*/
-     background-color: rgba(255,255,255,0.8);
+     background-color: rgba(255,255,255,1);
      
  }
  header nav .depth2 > li > a{
@@ -156,6 +175,7 @@ header nav > ul > li:last-child{
      height: 60px;
      padding-top: 18px;
      padding-bottom: 18px;
+     
  }
  
  .gnb .depth2 a:hover {
@@ -177,34 +197,35 @@ header nav > ul > li:last-child{
   }
   
   #s1 {
-    background-image: url(/images/main\ bk.jpg);
+    background-image: url(../images/main\ bk.jpg);
     width: 100%;
   }
-  #s1 .container{
+  #s1 .containerfirst{
      width: 1440px;
      margin: 0 auto;
-      
+     
       height: 850px;
       
   }
 
-  #s1 .container .group .col{
+  #s1 .containerfirst .group .colfirst{
       display: inline-block;
       float: left;
       width: 720px;
       
       padding-top: 65px;
   }
-  #s1 .container .group .col img.main{
+  #s1 .containerfirst .group .colfirst img.main{
     
       height: 700px;
   }
-  #s1 .container .group .col > .box{
+  #s1 .containerfirst .group .colfirst > .box{
       padding-top: 100px;
       color:var(--main-color);
       padding-top: 140px;
+      
   }
-  #s1 .container .group .col .box h2 > img{
+  #s1 .containerfirst .group .colfirst .box h2 > img{
       font-size: 40px; 
       width: 394px;
       height: 146px;
@@ -212,7 +233,7 @@ header nav > ul > li:last-child{
       
      
   }
-  #s1 .container .group .col .box  h1{
+  #s1 .containerfirst .group .colfirst .box  h1{
       font-size: 90px;
       width: 570px;
       height: 149px;
@@ -224,7 +245,7 @@ header nav > ul > li:last-child{
       box-shadow: 4px 4px 6px rgba(10,23,78,0.4);
   }
 
-  #s1 .container .group .col .box  p{
+  #s1 .containerfirst .group .colfirst .box  p{
     font-size: 35px;
     width: 570px;
     height: 149px;
@@ -235,7 +256,7 @@ header nav > ul > li:last-child{
     padding-top: 20px;
     box-shadow: 4px 4px 6px rgba(10,23,78,0.4);
 }
-  #s1 .container .col img{
+  #s1 .containerfirst .colfirst img{
       width: 720px;
       height: 600px;
       
@@ -244,11 +265,28 @@ header nav > ul > li:last-child{
       text-align: center;
       
   }
-  #s1 .container .mouse > h1 > img{
+  #s1 .containerfirst .mouse > h1 > img{
         width: 20px;
-        
+        animation: mouse 3s infinite alternate linear;
   }
-  #s1 .container .mouse > h1.scroll > img{
+  
+  @keyframes mouse{
+    0%{margin-top: 1px;}
+    17%{margin-top: 2px;}
+    21%{margin-top: 3px;}
+    29%{margin-top: 4px;}
+    35%{margin-top: 5px;}
+    45%{margin-top: 6px;}
+    56%{margin-top: 6px;}
+    66%{margin-top: 5px;}
+    77%{margin-top: 4px;}
+    88%{margin-top: 3px;}
+    90%{margin-top: 2px;}
+    95%{margin-top: 1px;}
+    100%{margin-top: 0;}
+    
+  }
+  #s1 .containerfirst .mouse > h1.scroll > img{
     width: 10px;
     
 }
@@ -274,19 +312,351 @@ header nav > ul > li:last-child{
     margin-left: 3%;
 }
   #s2 {
-    background-image: url(/images/sub\ bk.jpg.png);
+    background-image: url(../images/sub\ bk.jpg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    
   }
-  
+  #s2 .container{
+    width: 1440px;
+    margin: 0 auto;
+    height: 850px;
+    
+  }
+  #s2 .container .title{
+    
+    color: var(--main-color);
+    height:130px;
+    /*outline: 1px solid #0A174E;*/
+    border-bottom: 4px solid var(--main-color);
+  }
+  #s2 .container .title > h1{
+    font-size: 60px;
+    margin-left: 133px;
+    float: left;
+    padding-top: 15px;
+  }
+  #s2 .container .title > h2{
+    font-size: 40px;
+    margin-left: 1300px;
+    padding-top: 35px;
+  }
+  #s2 .intro{
+    width: 1440px;
+    height: 240px;
+    background-color: white;
+    color: var(--main-color);
+    
+  } 
+  #s2 .intro .col{
+    width: 720px;
+    height: 330px;
+    float: left;
+    
+  }
+  #s2 .intro .col > h1.profile{
+    text-align: center;
+    margin-top: 45px;
+  }
+  #s2 .intro .col > h1.profile > img{
+    width: 215px;
+  }
+  #s2 .intro .col .right{
+    text-align: center;
+    margin-top: 38px;
+  }
+  #s2 .intro .col .right p.first{
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  #s2 .intro .col .right p.first > .big{
+    font-size: 25px;
+    }
+  #s2 .intro .col .right p.name{
+      font-size: 40px;
+      font-weight: bold;
+     
+    }
+  #s2 .intro .col .right p.name > .strong{
+      font-size: 56px;
+      margin-left: 15px;
+    }
+  #s2 .intro .col .right .aboutBox{
+    width: 200px;
+    font-size: 20px;
+    margin-top: 47px;
+    
+    padding-top: 40px;
+    border-top: 2px solid var(--main-color);
+    margin-left: 270px;
+  }
+  #s2 .dictionary{
+    height: 426px;
+    background-color: white;  
+    border-bottom: 4px solid var(--main-color);
+  }
+  #s2 .dictionary .col3{
+    width: 480px;
+    float: left;
+    
+    height: 426px;
+    color: var(--main-color);
+    
+  }
+  #s2 .dictionary .col3 .colbox{
+    margin-left: 133px;
+    margin-top: 45px;
+  }
+  #s2 .dictionary .col3 .colbox > img{
+    width: 157px;
+    margin-bottom: 30px;
+  }
+  #s2 .dictionary .col3 .colbox > p.word{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  #s2 .dictionary .col3 .colbox > p.explain{
+    font-size: 16px;
+    margin-top: 10px;
+  }
   #s3 {
-    background-image: url(/images/sub\ bk.jpg.png);
+    background-image: url(../images/sub\ bk.jpg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    color: var(--main-color);
   }
-  
+  #s3 .container{
+    background-color: white;
+    width: 1440px;
+    height: 750px;
+    border-bottom: 4px solid var(--main-color);
+    border-top: 4px solid var(--main-color);
+  }
+  #s3 .container .about2{
+    height: 467px;
+    
+  }
+  #s3 .container .about2 .col2{
+    
+    width: 720px;
+    float: left;
+    height: 467px;
+    padding-top: 60px;
+    padding-left: 133px;
+  }
+  #s3 .container .about2 .col2 h3{
+    font-size: 50px;
+    width: 185px;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  #s3 .container .about2 .col2 h3.contact{
+    width: 245px;
+  }
+  #s3 .container .about2 .col2 p.skill{
+    font-size: 20px;
+    
+    float: left;
+    width: 222px;
+    
+    
+  }
+  #s3 .container .about2 .col2 .graphbox{
+    width: 495px;
+  }
+  #s3 .container .about2 .col2 .graphbox .graph{
+    width: 310px;
+    height: 28px;
+    border: 1px solid var(--main-color);
+    margin-left: 250px;
+  }
+  #s3 .container .about2 .col2 .graphbox .graph .photograph{
+    width: 227px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph{
+    width: 310px;
+    height: 28px;
+    border: 1px solid var(--main-color);
+    margin-left: 250px;
+    margin-top: 30px;
+
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .htmlgraph{
+    width: 275px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .cssgraph{
+    width: 265px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .javagraph{
+    width: 185px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .gtqgraph{
+    width: 227px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .webgraph{
+    width: 186px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .comgraph{
+    width: 265px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s3 .container .about2 .col2 .graphbox2 .graph .wordgraph{
+    width: 227px;
+    height: 26px;
+    background-color: var(--sub-color);
+  }
+  #s4{
+    background-image: url(../images/sub\ bk.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--main-color);
+  }
+  #s4 .container{
+    width: 1440px;
+    margin: 0 auto;
+    border-bottom: 4px solid var(--main-color);
+    height: 781px;
+    
+    margin-bottom: 66px;
+  }
+  #s4 .container .title{
+    
+    color: var(--main-color);
+    height:130px;
+    /*outline: 1px solid #0A174E;*/
+    border-bottom: 4px solid var(--main-color);
+  }
+  #s4 .container .title > h1{
+    font-size: 60px;
+    margin-left: 133px;
+    float: left;
+    padding-top: 15px;
+  }
+  #s4 .container .title > h2{
+    font-size: 40px;
+    margin-left: 1300px;
+    padding-top: 35px;
+  }
+  #s4 .container .project .col2{
+    width: 720px;
+    border-right: 1px solid var(--main-color);
+    float: left;
+    height: 646px;
+    background-color: white;
+    padding-top: 104px;
+  }
+  #s4 .container .project .col2:last-child{
+    border-right: none;
+  }
+  #s4 .container .project .col2 > img{
+    width: 212px;
+    
+  }
+  #s4 .container .project .col2 .subtitle{
+    text-align: center;
+  }
+  #s4 .container .project .col2 .subtitle > p.up{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  #s4 .container .project .col2 .subtitle > p.down{
+    
+    padding-bottom: 40px;
+    font-size: 18px;
+
+  }
+  #s4 .container .project .col2 .subtitle > a {
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: lighter;
+  }
+  #s5{
+    background-image: url(../images/sub\ bk.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--main-color);
+  }
+  #s5 .container{
+    width: 1440px;
+    margin: 0 auto;
+    border-bottom: 4px solid var(--main-color);
+    height: 781px;
+    
+    margin-bottom: 66px;
+  }
+  #s5 .container .title{
+    
+    color: var(--main-color);
+    height:130px;
+    /*outline: 1px solid #0A174E;*/
+    border-bottom: 4px solid var(--main-color);
+  }
+  #s5 .container .title > h1{
+    font-size: 60px;
+    margin-left: 133px;
+    float: left;
+    padding-top: 15px;
+  }
+  #s5 .container .title > h2{
+    font-size: 40px;
+    margin-left: 1300px;
+    padding-top: 35px;
+  }
+  #s5 .container .project .col2{
+    width: 720px;
+    border-right: 1px solid var(--main-color);
+    float: left;
+    height: 646px;
+    background-color: white;
+    padding-top: 104px;
+  }
+  #s5 .container .project .col2:last-child{
+    border-right: none;
+  }
+  #s5 .container .project .col2 > img{
+    width: 212px;
+    
+  }
+  #s5 .container .project .col2 .subtitle{
+    text-align: center;
+  }
+  #s5 .container .project .col2 .subtitle > p.up{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  #s5 .container .project .col2 .subtitle > p.down{
+    
+    padding-bottom: 40px;
+    font-size: 18px;
+
+  }
+  #s5 .container .project .col2 .subtitle > a {
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: lighter;
+  }
   .fullpage {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -297,4 +667,18 @@ header nav > ul > li:last-child{
   .fullpage > section {
     /*스냅 걸리는 위치*/
     scroll-snap-align: start;
+  }
+
+  footer{
+    width: 100%;
+    text-align: center;
+    height: 200px;
+    padding-top: 70px;
+    color: var(--main-color);
+    background-color: var(--sub-color);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  footer p{
+    padding-top: 10px;
   }
